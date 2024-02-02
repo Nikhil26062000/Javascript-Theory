@@ -31,4 +31,40 @@
 
         This is still closures as the function y will remember its lexical scope and its parents lexical scope also;
 
+    ? Another example
+        var count = 0;
+        return function incCounter(){
+            count++;
+            console.log(count);
+        }
+
+        suppose this is a code . at this time anyone can access the count variable . but by the help of closures we can protect data
+
+        lets move this code into a function so that know one outside the function can access the count variable
+        ? wrapping into function to form closure
+        function counter(){
+            var count = 0;
+            return function incCounter(){
+                count++
+            }
+
+        }
+
+        ! now no one can access the count var outside counter()
+
+        ? one more important point
+        if we call the incCounter then
+        var temp = counter();
+        temp();
+        temp();
+        temp(); // will print 1 2 3
+
+        now if we make 
+        var temp2 = counter();
+        temp2() // will print 1 .
+        !this will be new incCounter() that will be returned and whole counter() will also be new for temp2 .
+
+    ? Garbage Collector 
+        - Todays some of browser have smart mechanism garbage collector which detect that which variable should get in garbage if it is not used in closure.
+
  */
