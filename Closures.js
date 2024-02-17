@@ -14,7 +14,7 @@
     z() // output 7
     now if we call z anywhere below the code it will print a's value = 7.
 
-    This is what closures are . the function y remembe its lexical scope
+    This is what closures are . the function y remember its lexical scope
 
     ? - Another example
         function z(){
@@ -40,7 +40,7 @@
 
         suppose this is a code . at this time anyone can access the count variable . but by the help of closures we can protect data
 
-        lets move this code into a function so that know one outside the function can access the count variable
+        lets move this code into a function so that no one outside the function can access the count variable
         ? wrapping into function to form closure
         function counter(){
             var count = 0;
@@ -65,6 +65,6 @@
         !this will be new incCounter() that will be returned and whole counter() will also be new for temp2 .
 
     ? Garbage Collector 
-        - Todays some of browser have smart mechanism garbage collector which detect that which variable should get in garbage if it is not used in closure.
+        - Todays some of browser have smart mechanism garbage collector which detect that which variable should get in garbage if it is not used in closure.In JavaScript, variables are garbage collected when they are no longer reachable, meaning there are no references to them.
 
  */

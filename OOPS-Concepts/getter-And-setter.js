@@ -25,7 +25,7 @@ const person1 = new Person("Ayush Raj",20)
 console.log(person1); //Person {name: "Ayush Raj", age: 20
 console.log(person1.info);// Ayush Raj
 
-person1.personName = "Nikhil Raj"
+person1.personName = "Sumit Raj"
 console.log(person1);
 
 
