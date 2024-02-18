@@ -40,3 +40,6 @@ class Student extends CreateStudent{
 const student1 = new Student("Ayu","nikhil@gmail.com",22,"xxx",88);
 console.log(student1)
 console.log(student1.isTopper());
+
+
+
