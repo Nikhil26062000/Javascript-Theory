@@ -106,9 +106,9 @@
     ! In the above example, the local variable 'a' declared within myFunction shadows the global variable 'a' within the function's scope.
 
     Illegal Shadowing:
-        - let a = 20;
+        - let a = 20; // this will be in block scope becuase let is a block scope
         {
-            var a = 20; // ILLEGAL SHADOWING - This will cause an error 
+            var a = 20; // ILLEGAL SHADOWING - This will cause an error and the error occurs not because var a would be in the global scope, but because it's trying to re-declare the same variable var a within the same block where let a is already declared. This is not allowed due to illegal shadowing.
 
             let a = 20; // This is fine
         }
