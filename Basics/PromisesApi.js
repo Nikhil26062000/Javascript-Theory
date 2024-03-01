@@ -1,5 +1,5 @@
 
-//? ------------------ 1.Primise.all() -----------------------
+//? ------------------ 1.Promise.all() -----------------------
 
 const p1 = new Promise((resolve,reject) => {
     setTimeout(()=>{

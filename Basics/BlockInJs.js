@@ -4,7 +4,7 @@
 
 ? Block 
 - It is also compound Statement
-- Group of statements can bw used in place where javascript expects a single statement is known as block
+- Group of statements can be used in place where javascript expects a single statement is known as block
 
 ? Block Scope
     - {
