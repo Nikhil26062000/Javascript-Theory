@@ -1,3 +1,12 @@
+
+//!https://www.interviewbit.com/javascript-interview-questions/
+
+
+
+
+
+
+
 //? ------------------- 1. different data types present in javascript? -----------------------------
 //*1. Primitve type : stores only single value
 //-String
