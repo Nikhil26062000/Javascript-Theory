@@ -117,6 +117,7 @@ class doublyLinkedList {
     }
     return count;
   }
+
 }
 
 let ll = new doublyLinkedList();
@@ -138,3 +139,5 @@ ll.removeAtRandom(4);
 ll.display();
 let cc = ll.size();
 console.log("Size of LinkedList is :", cc);
+
+
