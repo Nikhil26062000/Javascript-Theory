@@ -20,7 +20,7 @@ class CreateStudent {
 const user1 = new CreateStudent("Nikhil","nikhil@gmail.com",23,"xyz");
 
 console.log(user1);
-console.log(Object.getPrototypeOf(user1));
+console.log(Object.getPrototypeOf(user1)); //Object.getPrototypeOf(user1) will return the prototype object of the CreateStudent class.
 
 //Inheritence
 class Student extends CreateStudent{

@@ -72,6 +72,24 @@
     }
     obj2.x();
 
+
+    /*
+    !explain:
+     Method x:
+    -Defined as a regular function within obj2.
+    -When called, this inside x refers to obj2.
+        
+    Arrow Function y:
+    -Defined inside the method x.
+    -Arrow functions do not have their own this context. Instead, they inherit this from their enclosing lexical context.
+    -Since y is defined within x, the this in y is inherited from x.
+    -Therefore, this inside y is the same as this inside x.
+    
+    Result:
+    -this in x: Refers to obj2.
+    -this in y: Also refers to obj2, as it inherits this from the lexical context of x
+    */
+
 //* -------------- this keyword inside DOM ---------------
     // see video
 

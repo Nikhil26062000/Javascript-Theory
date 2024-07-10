@@ -1,4 +1,7 @@
 
+//!Polyfills are pieces of code (typically JavaScript) that provide functionality that is not natively supported by some browsers or environments. They are used to fill in gaps and ensure that web applications work consistently across different browsers, especially when dealing with new or non-standard features.
+
+
 let name = {
     firstname: 'John',
     lastname: 'Doe'

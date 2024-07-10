@@ -128,6 +128,53 @@
 
  */
 
+
+
+/*   ----------------------------- ILLEGAL SHADOWING EXPLAINED FROM CHATGPT ------------------------------------------------
+  
+    !Illegal Shadowing
+    Illegal shadowing occurs when certain variable declarations try to shadow variables in a way that JavaScript doesn't allow. For instance, using let or const to shadow a variable declared with var in the same scope is illegal.
+
+    function illegalShadowing() {
+     var y = 30;
+     let y = 40; // SyntaxError: Identifier 'y' has already been declared
+    }
+
+    illegalShadowing();
+
+    In the example above:
+
+    var y = 30; declares a variable y in the function scope.
+    let y = 40; tries to declare another y in the same scope, leading to a SyntaxError because let and var cannot be used to declare variables with the same name in the same scope.
+
+
+
+    ! below example is of legal shadowind
+    function legalShadowing() {
+     var z = 50;
+
+     if (true) {
+        let z = 60; // This 'z' shadows the outer 'z' only within this block
+        console.log(z); // 60
+     }
+
+      console.log(z); // 50
+    }
+
+    legalShadowing();
+
+    In this example:
+
+    var z = 50; declares z in the function scope.
+    let z = 60; declares a new z within the block scope of the if statement, shadowing the outer z within that block.
+    console.log(z) inside the block prints 60, while outside the block it prints 50.
+
+
+    
+
+ * 
+ * 
+ */
  
 
 

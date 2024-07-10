@@ -40,3 +40,42 @@ The synchronous code execution of a() completes.
 The event loop picks up the callback function scheduled by setTimeout and executes it, logging 'setTimeout' to the console.
 So, even though the timeout is set to 0 milliseconds, it's still scheduled asynchronously and doesn't interrupt the synchronous flow of the code. As a result, 'setTimeout' is logged to the console after 'b'.
     */
+
+
+
+//! ---------------------------- below is the code from chatgpt about the order in which task will be called -----------------------
+
+/*
+console.log('Start');
+
+setTimeout(() => {
+  console.log('Timeout callback'); // Macrotask
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('Promise callback'); // Microtask
+});
+
+console.log('End');
+
+
+
+
+Output:order of execution is ->
+
+Start (Synchronous)
+End (Synchronous)
+Promise callback (Microtask)
+Timeout callback (Macrotask
+
+
+!overall summary:
+
+
+1.Synchronous Code: All synchronous operations (functions, console logs, etc.) are executed first which is in call stack.
+2.Microtasks: After the call stack is empty, the event loop processes all microtasks in the microtask queue. Microtasks include promise callbacks (Promise.then()), MutationObserver, and queueMicrotask.
+3.Macrotasks (Callback Queue): Once all microtasks are executed, the event loop processes tasks from the macrotask queue, which include setTimeout, setInterval, I/O tasks, and event callbacks.
+
+? starvation : when the microtask queue continuously receives new tasks, preventing the event loop from processing tasks in the callback queue.
+
+*/

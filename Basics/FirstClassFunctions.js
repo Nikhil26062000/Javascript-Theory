@@ -2,12 +2,12 @@
 
 /*
 
-? 1.Function Statement / Function Declaration
+? 1.Function Statement / Function Declaration : hoisted
     function a(){
         console.log("I am a function");
     }
 
-? 2.Function expression
+? 2.Function expression : Not hoisted
     var b = function() {
         console.log("b is called");
     }
